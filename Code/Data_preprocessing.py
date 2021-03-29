@@ -30,6 +30,12 @@ def clean_text(text):
     clean_text = PRIVACY_POLICY_RE.sub('',clean_text)
     return clean_text.strip()
 
+PRIVACY_POLICY_RE = re.compile(r'el contenido de este aviso es de propiedad del anunciante. los requisitos de la posición son definidos y administrados por el anunciante sin que bumeran sea responsable por ello.')
+def clean_text2(text):
+    text = text.lower()
+    text = text.strip()
+    clean_text = PRIVACY_POLICY_RE.sub('',text)
+    return clean_text.strip()
 
 DATA_PATH = './Data/xample_bumeran2Utf8.csv'
 df = pd.read_csv(DATA_PATH, encoding='utf8')
@@ -37,9 +43,13 @@ df = pd.read_csv(DATA_PATH, encoding='utf8')
 # Limpieza del texto #
 df = df.reset_index(drop=True)
 df['texto'] = df['texto'].apply(normalize_text)
-df['texto'] = df['texto'].apply(clean_text)
+df['texto'] = df['texto'].apply(clean_text2)
 df.drop_duplicates(subset='texto', keep='first', inplace=True)
 df = df.reset_index(drop=True)
+
+for text in df['texto']:
+    print(text)
+    break
 
 # Creación de nuevo dataframe para utilizar en la etapa de backtranslation#
 new_df = pd.DataFrame()
