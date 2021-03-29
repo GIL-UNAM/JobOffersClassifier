@@ -5,7 +5,22 @@ Proyecto de clasificación multiclase de ofertas de trabajo utilizando aprendiza
 * El conjunto de datos después de aplicar backtranslation está disponible [aquí](https://drive.google.com/drive/folders/1qRtoGDDpmrms8CiLaQ2HrgLORq7Y5XBr?usp=sharing)
 
 ## Backtranslation
-Para llevar a cabo el proceso de backtranslation se utilizó el traductor de Google y la herramienta de Google sheets como se indica [aquí](https://amitness.com/2020/02/back-translation-in-google-sheets/)
+Para llevar a cabo el proceso de backtranslation se utilizó el traductor de Google y la herramienta de Google sheets como se indica [aquí](https://amitness.com/2020/02/back-translation-in-google-sheets/).
+
+Se utilizaron 10 idiomas intermedios para realizar el proceso, los cuales son:
+| Idioma | Código |
+| --- | --- |
+| Inglés | en |
+| Télugu | te |
+| Chino | zh |
+| Rumano | ro |
+| Árabe | ar |
+| Japones | ja |
+| Javanés | jv |
+| Coreano | ko |
+| Vietnamita | vi |
+| Turco | tr |
+| Yoruba | yo |
 
 Para realizar esta etapa, se convirtió el texto a minusculas, se eliminó el aviso de privacidad y re removieron las ofertas repetidas, los datos obtenidos fueron los siguientes:
 
@@ -34,6 +49,8 @@ Para realizar esta etapa, se convirtió el texto a minusculas, se eliminó el av
 | Gerencia | 282 |
 | Comercio Exterior | 233 |
 | Minería | 47 |
+
+Se han aumentado los datos para las clases con menos de 1000 instancias.
 
 ## Word embeddings
 Se utilizó un modelo pre-entrenado en español de word2vec disponible [aquí](http://crscardellino.github.io/SBWCE/)
