@@ -89,7 +89,7 @@ Se utilizaron 2 arquitecturas de red neuronal.
 ![LSTM](./Images/lstm_model.png)
 
 2. CNN
-![CNN](./images/cnn_model.png)
+![CNN](./Images/cnn_model.png)
 
 ## Entrenamiento y prueba
 Se utilizó un proceso de validación cruzada estratificada con _k = 5_
