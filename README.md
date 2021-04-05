@@ -52,5 +52,46 @@ Para realizar esta etapa, se convirtió el texto a minusculas, se eliminó el av
 
 Se han aumentado los datos para las clases con menos de 1000 instancias.
 
+Después de llevar a cabo el aumento de los datos, se tienen los siguientes datos:
+
+| Clase | Instancias |
+| --- | --- |
+Ventas | 13721 |
+Ingeniería | 10932 |
+Administración | 9028 |
+Call Center | 8876 |
+Educación | 8640 |
+Diseño | 8220 |
+Legales | 8208 |
+Construcción | 7800 |
+Seguros | 7224 |
+Tecnología | 5951 |
+Comunicación | 5148 |
+Oficios | 4094 |
+Gerencia | 3384 |
+Comercio Exterior | 2796 |
+Recursos Humanos | 2429 |
+Logística | 2321 |
+Mercadotecnia | 1746 |
+Salud | 1644 |
+Finanzas | 1373 |
+Gastronomía | 1363 |
+Secretaria | 1281 |
+Producción | 1174 |
+Minería | 564 |
+
 ## Word embeddings
 Se utilizó un modelo pre-entrenado en español de word2vec disponible [aquí](http://crscardellino.github.io/SBWCE/)
+
+## Modelos
+Se utilizaron 2 arquitecturas de red neuronal.
+1. LSTM
+![LSTM](./Images/lstm_model.png)
+
+2. CNN
+![CNN](./images/cnn_model.png)
+
+## Entrenamiento y prueba
+Se utilizó un proceso de validación cruzada estratificada con _k = 5_
+ 
+
